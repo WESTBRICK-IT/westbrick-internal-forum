@@ -16,19 +16,19 @@
 </head>
 <body>
     <img class="main-title" src="img/westbrick-internal-market.svg" alt="Westbrick Internal Market Title">
-    <button onclick="window.location.href='./PHP/new-item.html'" class="post-item-button" type="button">Post New Item</button>
-    <div class="items">
+    <button onclick="window.location.href='./PHP/new-thread.html'" class="post-thread-button" type="button">Post New thread</button>
+    <div class="threads">
 
-        <!-- <div class="item">            
-            <img class="item-image" src="img/motorcycle-1.jpg" alt="Item Image"></img>
+        <!-- <div class="thread">            
+            <img class="thread-image" src="img/motorcycle-1.jpg" alt="thread Image"></img>
             <div class="top-middle-things">
-                <h1 class="item-title">Japanese 80's Motorcycle Really Long Title OVer here</h1>
-                <h4 class="item-seller">Chris Barber</h4>
-                <h5 class="item-posting-date">May 3rd 2024</h5>                
+                <h1 class="thread-title">Japanese 80's Motorcycle Really Long Title OVer here</h1>
+                <h4 class="thread-seller">Chris Barber</h4>
+                <h5 class="thread-posting-date">May 3rd 2024</h5>                
             </div>              
-            <p class="item-body">Sup dudes, I'm selling this motorcycle. It's really cool. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <h1 class="item-price">$5000</h3>            
-            <a class="item-garbage-button" href="#"><img class="item-garbage-button" src="img/garbage-can.svg" alt="Garbage Can"></a>
+            <p class="thread-body">Sup dudes, I'm selling this motorcycle. It's really cool. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h1 class="thread-price">$5000</h3>            
+            <a class="thread-garbage-button" href="#"><img class="thread-garbage-button" src="img/garbage-can.svg" alt="Garbage Can"></a>
         </div>         -->
 
         <?php
@@ -41,7 +41,7 @@
 
             if (!in_array($remoteIP, $allowedIPs)) {
                 // Unauthorized access - display an error message or redirect
-                echo "<h1>Access denied. Your IP address is not allowed to view these items.</h1>";
+                echo "<h1>Access denied. Your IP address is not allowed to view these threads.</h1>";
                 exit();
             }
             function convertApostrophe($string) { 
@@ -49,14 +49,14 @@
 				return $newString; 
 			}
             // Connect to the database
-			 $conn = mysqli_connect("localhost", "cbarber", "!!!Dr0w554p!!!", "item_db");
+			 $conn = mysqli_connect("localhost", "cbarber", "!!!Dr0w554p!!!", "thread_db");
 	 
 			 // Check connection
 			 if (!$conn) {
 				 die("Connection failed: " . mysqli_connect_error());
 			 }
 
-             $query = "SELECT * FROM `items` ORDER BY `date` DESC, `time` DESC";
+             $query = "SELECT * FROM `threads` ORDER BY `date` DESC, `time` DESC";
              $result = mysqli_query($conn, $query);
              if (mysqli_num_rows($result) > 0) {                                            
                 while($row = mysqli_fetch_assoc($result)){
@@ -93,23 +93,23 @@
                     }
                     //check if there are at least two images to display next and prev arrows
                     $atLeastTwo = false;
-                    $itemCount = 0;
+                    $threadCount = 0;
                     if($image_name != "") {
-                        $itemCount = $itemCount +1;
+                        $threadCount = $threadCount +1;
                     }
                     if($image_name2 != "") {
-                        $itemCount = $itemCount +1;
+                        $threadCount = $threadCount +1;
                     }
                     if($image_name3 != "") {
-                        $itemCount = $itemCount +1;
+                        $threadCount = $threadCount +1;
                     }
                     if($image_name4 != "") {
-                        $itemCount = $itemCount +1;
+                        $threadCount = $threadCount +1;
                     }
                     if($image_name5 != "") {
-                        $itemCount = $itemCount +1;
+                        $threadCount = $threadCount +1;
                     }
-                    if($itemCount >= 2) {
+                    if($threadCount >= 2) {
                         $atLeastTwo = true;                        
                     }                    
 
@@ -119,38 +119,38 @@
                     }
                     
                     
-                   echo 	"<div class='item'>";
-                   //Item Carousel
-                //    echo		    "<img class='item-image' onclick='window.location.href = `img/item-images/" . $image_name . "`;' src='img/item-images/". $image_name ."' alt='Item Image'></img>";
-                   echo     "<div class='item$id-images item-images' alt='0'>";
+                   echo 	"<div class='thread'>";
+                   //thread Carousel
+                //    echo		    "<img class='thread-image' onclick='window.location.href = `img/thread-images/" . $image_name . "`;' src='img/thread-images/". $image_name ."' alt='thread Image'></img>";
+                   echo     "<div class='thread$id-images thread-images' alt='0'>";
                    if($image_name != "") {
                    echo         "<div class='mySlides fade'>";                   
-                   echo             "<img class='item$id-image1 item-image1 item-image' onclick='window.location.href = `img/item-images/" . $image_name . "`;' src='./img/item-images/". $image_name . "' alt='Item Image' style='width:100%'></img>";
+                   echo             "<img class='thread$id-image1 thread-image1 thread-image' onclick='window.location.href = `img/thread-images/" . $image_name . "`;' src='./img/thread-images/". $image_name . "' alt='thread Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name2 != "") {
                    echo         "<div class='mySlides fade' alt='0'>";
-                   echo             "<img class='item$id-image2 item-image' onclick='window.location.href = `img/item-images/" . $image_name2 . "`;' src='./img/item-images/". $image_name2 . "' alt='Item Image' style='width:100%'></img>";
+                   echo             "<img class='thread$id-image2 thread-image' onclick='window.location.href = `img/thread-images/" . $image_name2 . "`;' src='./img/thread-images/". $image_name2 . "' alt='thread Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name3 != "") {
                    echo         "<div class='mySlides fade' alt='0'>";
-                   echo             "<img class='item$id-image3 item-image' onclick='window.location.href = `img/item-images/" . $image_name3 . "`;' src='./img/item-images/". $image_name3 . "' alt='Item Image' style='width:100%'></img>";
+                   echo             "<img class='thread$id-image3 thread-image' onclick='window.location.href = `img/thread-images/" . $image_name3 . "`;' src='./img/thread-images/". $image_name3 . "' alt='thread Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name4 != "") {
                    echo         "<div class='mySlides fade' alt='0'>";
-                   echo             "<img class='item$id-image4 item-image' onclick='window.location.href = `img/item-images/" . $image_name4 . "`;' src='./img/item-images/". $image_name4 . "' alt='Item Image' style='width:100%'></img>";
+                   echo             "<img class='thread$id-image4 thread-image' onclick='window.location.href = `img/thread-images/" . $image_name4 . "`;' src='./img/thread-images/". $image_name4 . "' alt='thread Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name5 != "") {
                    echo         "<div class='mySlides fade' alt='0'>";
-                   echo             "<img class='item$id-image5 item-image' onclick='window.location.href = `img/item-images/" . $image_name5 . "`;' src='./img/item-images/". $image_name5 . "' alt='Item Image' style='width:100%'></img>";
+                   echo             "<img class='thread$id-image5 thread-image' onclick='window.location.href = `img/thread-images/" . $image_name5 . "`;' src='./img/thread-images/". $image_name5 . "' alt='thread Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($allEmpty){
                    echo         "<div class='mySlides fade' alt='0'>";
-                   echo             "<img class='item$id-image5 item-image' onclick='window.location.href = `img/item-images/" . $westbrickSVG . "`;' src='./img/item-images/". $westbrickSVG . "' alt='Item Image' style='width:100%'></img>";
+                   echo             "<img class='thread$id-image5 thread-image' onclick='window.location.href = `img/thread-images/" . $westbrickSVG . "`;' src='./img/thread-images/". $westbrickSVG . "' alt='thread Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    //If there is at least two images then add arrows
@@ -159,24 +159,24 @@
                     echo         "<a class='next' onclick='nextSlide($id)'>&#10095;</a>";
                    }                   
                    echo     "</div>";
-                   //Item Carousel End
+                   //thread Carousel End
                    echo         "<div class='top-middle-things'>";
-                   echo		        "<h1 class='item-title'>" . $title . "</h1>";
-                   echo			    "<h4 class='item-seller'>". $seller . "</h4>";
+                   echo		        "<h1 class='thread-title'>" . $title . "</h1>";
+                   echo			    "<h4 class='thread-seller'>". $seller . "</h4>";
                    if(!$emailEmpty){
-                   echo             "<h4><a href='mailto:$email' class='item-seller-email'>$email</a></h4>";
+                   echo             "<h4><a href='mailto:$email' class='thread-seller-email'>$email</a></h4>";
                    }                   
-                   echo 		    "<h5 class='item-posting-date'>" . $date . "</h5>";
-                   echo 		    "<h5 class='item-posting-date'>" . $time . "</h5>";
+                   echo 		    "<h5 class='thread-posting-date'>" . $date . "</h5>";
+                   echo 		    "<h5 class='thread-posting-date'>" . $time . "</h5>";
                    echo 	    "</div>";
-                   echo         "<div class='item-body'>";
-                   echo 	        "<p class='item-body'>" . $body . "</p>";
+                   echo         "<div class='thread-body'>";
+                   echo 	        "<p class='thread-body'>" . $body . "</p>";
                    echo         "</div>";
-                   echo 	    "<h1 class='item-price'>$" . $price . "</h1>";
-                //    echo 	    "<a class='item-garbage-button' href='./PHP/delete-item.php?id=$id'><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can'></a>";
-                   echo         "<img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $id'></img>";
-                   echo         "<h6 class='item-id'>Item # $id</h6>";
-                //    echo 	    "<a class='item-garbage-button' onclick='deleteItem(this.alt)'><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $i'></a>";
+                   echo 	    "<h1 class='thread-price'>$" . $price . "</h1>";
+                //    echo 	    "<a class='thread-garbage-button' href='./PHP/delete-thread.php?id=$id'><img class='thread-garbage-button' src='img/garbage-can.svg' alt='Garbage Can'></a>";
+                   echo         "<img class='thread-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $id'></img>";
+                   echo         "<h6 class='thread-id'>thread # $id</h6>";
+                //    echo 	    "<a class='thread-garbage-button' onclick='deletethread(this.alt)'><img class='thread-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $i'></a>";
                    echo     "</div>";                   
                 }            
             }
