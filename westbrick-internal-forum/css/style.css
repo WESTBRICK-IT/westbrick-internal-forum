@@ -1,4 +1,4 @@
-/* Programmed by Chris Barber June 14 2024 */
+/* Programmed by Chris Barber June 6 2024 */
 html{
     /* background-color: rgba(220, 164, 19, 0.2); */
     background-image: url(../img/WESTBRICK-wide-transparent.svg);    	
@@ -89,10 +89,10 @@ html{
     padding-right: 16px;
     font-size: 20px;
 }
-.thread-creator {
+.thread-seller {
     
 }
-.item-posting-date {
+.thread-posting-date {
     
 }
 .thread-body {
@@ -264,7 +264,7 @@ input[type=number] {
     .thread-images {
         grid-row: 1;
     }
-    .forum {
+    .threads {
         margin-left: 100px;
         margin-right: 100px;
     }
@@ -290,7 +290,7 @@ input[type=number] {
 }
 @media screen and (max-width: 992px) {
     
-    .forum {
+    .threads {
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -373,3 +373,110 @@ input[type=number] {
     }
     
 }
+/* ARTICLE CODE */
+/* .article {
+    margin-bottom: 100px;
+    background-color: rgba(200, 200, 200, 0.3);
+    border-radius: 10px;
+    padding: 20px; 
+    padding-left: 60px;   
+    padding-right: 60px;
+    border-style: solid;
+    border-color: rgb( 220, 164, 19);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.articles-title {
+    margin-top: 30px;    
+}
+.article-author {
+    font-style: italic;
+    font-size: 24px;
+}
+.article-paragraph {
+    font-size: 24px;
+    text-indent: 40px;
+}
+.article-title {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: rgb( 220, 164, 19);
+}
+.submission-form {
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 100px;
+    background-color: rgba(200, 200, 200, 0.3);
+    border-radius: 10px;      
+    border-style: solid;
+    border-color: rgb( 220, 164, 19);
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+.submission-form label{
+    display: block;
+    font-size: 24px;
+    margin: 10px auto;
+    text-align: center;  
+    margin-top: 20px;  
+}
+.submission-form input{
+    display: block;
+    margin: 10px auto;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.60);
+    padding: 5px;
+    border-radius: 10px;      
+    border-style: solid;
+    border-color: rgb( 220, 164, 19);
+    border-width: 3px;
+}
+.date-box{
+    width: 300px;
+    padding: 5px;
+    text-align: center;
+}
+.submission-form textarea{
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    height: 500px;
+    padding: 20px;
+    border-radius: 10px;      
+    border-style: solid;
+    border-color: rgb( 220, 164, 19);
+    border-width: 4px;
+    background-color: rgba(255, 255, 255, 0.60);
+}
+.submit-button{
+    display: block;
+    margin: 30px auto 30px auto;    
+    width: 300px;
+    height: 70px;    
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;    
+    margin-top: 50px !important;
+}
+.choose-file-input-box {
+    width: 760px;
+    max-width: 90%;
+}
+.submit-button:hover {
+    background-color: rgba(253, 199, 22, 0.85);
+}
+.upload-image-button:hover {
+    background-color: rgba(253, 199, 22, 0.85);
+}
+.article-image {
+    max-width: 100%;
+    height: auto;
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 10px;      
+    border-style: solid;
+    border-color: rgb(27,27,27);
+    border-width: 2px;
+    padding: 13px;
+    margin-left: 40px;
+} */
