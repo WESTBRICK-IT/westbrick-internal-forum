@@ -120,36 +120,35 @@
                     
                     
                    echo 	"<div class='thread'>";
-                   //thread Carousel
-                //    echo		    "<img class='thread-image' onclick='window.location.href = `img/thread-images/" . $image_name . "`;' src='img/thread-images/". $image_name ."' alt='thread Image'></img>";
+                   //thread Carousel                
                    echo     "<div class='thread$id-images thread-images' alt='0'>";
                    if($image_name != "") {
-                   echo         "<div class='mySlides fade'>";                   
+                   echo         "<div alt='0'>";                   
                    echo             "<img class='thread$id-image1 thread-image1 thread-image' onclick='window.location.href = `img/thread-images/" . $image_name . "`;' src='./img/thread-images/". $image_name . "' alt='thread Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name2 != "") {
-                   echo         "<div class='mySlides fade' alt='0'>";
+                   echo         "<div alt='0'>";
                    echo             "<img class='thread$id-image2 thread-image' onclick='window.location.href = `img/thread-images/" . $image_name2 . "`;' src='./img/thread-images/". $image_name2 . "' alt='thread Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name3 != "") {
-                   echo         "<div class='mySlides fade' alt='0'>";
+                   echo         "<div alt='0'>";
                    echo             "<img class='thread$id-image3 thread-image' onclick='window.location.href = `img/thread-images/" . $image_name3 . "`;' src='./img/thread-images/". $image_name3 . "' alt='thread Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name4 != "") {
-                   echo         "<div class='mySlides fade' alt='0'>";
+                   echo         "<div alt='0'>";
                    echo             "<img class='thread$id-image4 thread-image' onclick='window.location.href = `img/thread-images/" . $image_name4 . "`;' src='./img/thread-images/". $image_name4 . "' alt='thread Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name5 != "") {
-                   echo         "<div class='mySlides fade' alt='0'>";
+                   echo         "<div alt='0'>";
                    echo             "<img class='thread$id-image5 thread-image' onclick='window.location.href = `img/thread-images/" . $image_name5 . "`;' src='./img/thread-images/". $image_name5 . "' alt='thread Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($allEmpty){
-                   echo         "<div class='mySlides fade' alt='0'>";
+                   echo         "<div alt='0'>";
                    echo             "<img class='thread$id-image5 thread-image' onclick='window.location.href = `img/thread-images/" . $westbrickSVG . "`;' src='./img/thread-images/". $westbrickSVG . "' alt='thread Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
@@ -171,12 +170,9 @@
                    echo 	    "</div>";
                    echo         "<div class='thread-body'>";
                    echo 	        "<p class='thread-body'>" . $body . "</p>";
-                   echo         "</div>";
-                   echo 	    "<h1 class='thread-price'>$" . $price . "</h1>";
-                //    echo 	    "<a class='thread-garbage-button' href='./PHP/delete-thread.php?id=$id'><img class='thread-garbage-button' src='img/garbage-can.svg' alt='Garbage Can'></a>";
+                   echo         "</div>";                                 
                    echo         "<img class='thread-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $id'></img>";
-                   echo         "<h6 class='thread-id'>thread # $id</h6>";
-                //    echo 	    "<a class='thread-garbage-button' onclick='deletethread(this.alt)'><img class='thread-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $i'></a>";
+                   echo         "<h6 class='thread-id'>thread # $id</h6>";               
                    echo     "</div>";                   
                 }            
             }
