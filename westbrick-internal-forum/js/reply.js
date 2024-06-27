@@ -1,4 +1,5 @@
 const replyButton = document.querySelectorAll(".thread-reply-button");
+const replySubmitButton = document.querySelectorAll(".reply-submit-button");
 
 
 const displayReplyDiv = function(threadNumber) {
@@ -69,11 +70,19 @@ const extendReplyThings = function(threadNumber) {
     moveThreadNumToBottom(threadNumber);
     moveBinToBottom(threadNumber);
 }
+const moveBinUp = function(threadNumber) {
+    const garbageButtonElement = document.querySelector(".thread" + threadNumber + "-garbage-button");
+    garbageButtonElement.style.gridRow = 3;
+}
+const moveThreadNumberUp = function(threadNumber) {
+    const threadNumberElement = document.querySelector(".thread" + threadNumber + "-id");
+    threadNumberElement.style.gridRow = 3;
+}
 const hideReplyThings = function(threadNumber) {
+    moveBinUp(threadNumber);
+    moveThreadNumberUp(threadNumber);    
     decreaseGridSize(threadNumber);
-    hideReplyDiv(threadNumber);
-    moveThreadNumToBottom(threadNumber);
-    moveBinToBottom(threadNumber);
+    hideReplyDiv(threadNumber);    
 }
 const replyButtonClick = function() {    
     //get the reply extended state
@@ -94,7 +103,16 @@ const replyButtonClick = function() {
         replyDiv.dataset.replydivextended = replyDivExtendedState;        
     }
 }
+const replySubmitButtonClick = function() {    
+    const threadNumber = this.dataset.threadnumber;
+    console.log("Thread number:" + threadNumber);
+    //window.location.href = "./PHP/submit-reply.php?id="+ threadNumber;
+}
 //make an event listener for each reply button
 for(i = 0; i < replyButton.length; i++) {
     replyButton[i].addEventListener('click', replyButtonClick);
+}
+//make an event listener for each submit button
+for(i = 0; i < replySubmitButton.length; i++) {
+    replySubmitButton[i].addEventListener('click', replySubmitButtonClick);
 }

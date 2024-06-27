@@ -29,7 +29,7 @@
         $servername = "localhost";
         $username = "cbarber";
         $password = "!!!Dr0w554p!!!";
-        $dbname = "thread_db";
+        $dbname = "threads_db";
         
         $conn = new mysqli($servername, $username, $password, $dbname);
         
@@ -38,9 +38,8 @@
         }    
         
         $title = $_POST['title'];
-        $seller = $_POST['seller'];
-        $email = $_POST['email'];
-        $price = $_POST['price'];
+        $creator = $_POST['creator'];
+        $email = $_POST['email'];        
         $body = $_POST['body'];        
         $date = date('Y-m-d');        
         date_default_timezone_set('America/Denver'); 
@@ -52,9 +51,8 @@
             return $newString; 
         }    
         $title = convertApostrophe($title);
-        $seller = convertApostrophe($seller);
-        $body = convertApostrophe($body);    
-        $price = convertApostrophe($price); 
+        $creator = convertApostrophe($creator);
+        $body = convertApostrophe($body);            
         
 
         //get the first image and upload it
@@ -146,7 +144,7 @@
        //replace carriage return with paragraph
         $body = str_replace(chr(13), "</p><p class=`thread-body`>", $body); 
         
-        $sql = "INSERT INTO threads (title, seller, date, price, body, image_name, image_name2, image_name3, image_name4, image_name5, image_tmp, time, email) VALUES ('$title', '$seller', '$date', '$price', '$body', '$image_name', '$image_name2', '$image_name3', '$image_name4', '$image_name5', '$image_tmp', '$time', '$email')";
+        $sql = "INSERT INTO threads (title, creator, date, body, image_name, image_name2, image_name3, image_name4, image_name5, time, email) VALUES ('$title', '$creator', '$date', '$body', '$image_name', '$image_name2', '$image_name3', '$image_name4', '$image_name5', '$time', '$email')";
         // $sql = "INSERT INTO articles (title, author, body, date) VALUES ('$title', '$author', '$body', '$date')";
         
         if ($conn->query($sql) === TRUE) {
@@ -163,7 +161,7 @@
         } else {
             echo "<div class='westbrick-success-svg-container'>";
             echo    "Error: " . $sql . "<br>" . $conn->error;
-            echo    "<button class='home-button' type='button' onclick='window.location.href=`index.html`;'>Compose</button>";
+            echo    "<button class='home-button' type='button' onclick='window.location.href=`../index.php`;'>Compose</button>";
             echo "</div>";
         }
         $conn->close();

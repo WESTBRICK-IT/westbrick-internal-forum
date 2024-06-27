@@ -280,6 +280,11 @@ input[type=number] {
     -webkit-text-stroke-color: rgb( 220, 164, 19);
     -webkit-text-stroke-width: 2px;
 }
+.reply-submit-button {
+    margin-top: 5px;
+    width: 200px;
+    height: 2em;
+}
 @media screen and (max-width: 1700px) {
     .submission-form-top-input {
         flex-direction: column;
