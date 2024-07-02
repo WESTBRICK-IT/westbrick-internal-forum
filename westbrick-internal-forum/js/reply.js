@@ -1,22 +1,22 @@
 const replyButton = document.querySelectorAll(".thread-reply-button");
-const replySubmitButton = document.querySelectorAll(".reply-submit-button");
+const replySubmitButton = document.querySelectorAll(".thread-reply-submit-button");
 
 
-const displayReplyDiv = function(threadNumber) {
-    const thisReplyDiv = document.querySelector(".thread" + threadNumber + "-reply-div");
+const displayReplyGroup = function(threadNumber) {
+    const thisReplyGroup = document.querySelector(".thread" + threadNumber + "-reply-input-group");
     const thisThread = document.querySelector(".thread" + threadNumber);    
     if(window.innerWidth < 900) {
-        thisReplyDiv.style.gridColumn = 1;
-        thisReplyDiv.style.gridRow = 6;
+        thisReplyGroup.style.gridColumn = 1;
+        thisReplyGroup.style.gridRow = 6;
     } else {
-        thisReplyDiv.style.gridColumn = 2;
-        thisReplyDiv.style.gridRow = 4;
+        thisReplyGroup.style.gridColumn = 2;
+        thisReplyGroup.style.gridRow = 4;
     }
-    thisReplyDiv.style.display = "flex";
+    thisReplyGroup.style.display = "flex";
 }
 const hideReplyDiv = function(threadNumber) {
-    const thisReplyDiv = document.querySelector(".thread" + threadNumber + "-reply-div");
-    thisReplyDiv.style.display = "none";
+    const thisReplyGroup = document.querySelector(".thread" + threadNumber + "-reply-input-group");
+    thisReplyGroup.style.display = "none";
 }
 const getNumberOfGridRows = function(thisThread) {    
     const style = window.getComputedStyle(thisThread);
@@ -66,7 +66,7 @@ const moveBinToBottom = function(threadNumber) {
 }
 const extendReplyThings = function(threadNumber) {
     increaseGridSize(threadNumber);
-    displayReplyDiv(threadNumber);
+    displayReplyGroup(threadNumber);
     moveThreadNumToBottom(threadNumber);
     moveBinToBottom(threadNumber);
 }
@@ -87,7 +87,7 @@ const hideReplyThings = function(threadNumber) {
 const replyButtonClick = function() {    
     //get the reply extended state
     const threadNumber = this.dataset.threadnumber;
-    const replyDiv = document.querySelector(".thread"+ threadNumber +"-reply-div");    
+    const replyDiv = document.querySelector(".thread"+ threadNumber +"-reply-input-group");    
     let replyDivExtendedState = replyDiv.dataset.replydivextended;
     //convert to boolean
     replyDivExtendedState = JSON.parse(replyDivExtendedState);    

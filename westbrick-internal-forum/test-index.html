@@ -18,6 +18,7 @@
     <button class="post-thread-button" type="button" onclick="window.location.href = './PHP/new-thread.html';">Post New Thread</button> 
     <div class="forum">
         <div class='thread99 thread'>            
+            <!-- using this alt number as indices, do not remove -->
             <div class='thread99-images thread-images' alt='0'>
                 <div alt='0'>
                     <img class="thread99-image1 thread-image1 thread-image" onclick="window.location.href = 'img/motorcycle-1.jpg';" src="./img/motorcycle-1.jpg" style="width:100%"></img>
@@ -45,22 +46,26 @@
                 <h5 class='thread-posting-date'>14:41:40</h5>
             </div>
             <div class='thread-body'>
-                <p class='thread-body'>Number one, Ninjas are mammals; Number two, Ninjas fight all the time; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div> 
-            <button class="thread-reply-button99 thread-reply-button" data-threadNumber="99">Reply</button>            
-            
-            <form class="thread99-reply1-div thread99-reply-div thread-reply-div" data-replyDivExtended="false" method="post" action="./PHP/submit-reply.php" enctype="multipart/form-data">
+                <p class='thread-body'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>                         
+            <button class="thread-reply-button99 thread-reply-button" data-threadNumber="99">Reply</button>
+            <form class="thread99-reply-input-group thread-reply-input-group" data-replyDivExtended="false" method="post" action="./PHP/submit-reply.php" enctype="multipart/form-data">
                 
-                <label for="thread-reply1-box-name" class="thread-reply-box-name">Name:</label>                
-                <input type="text" id="thread-reply1-box-name" class="thread99-reply1-name thread99-reply-name thread-reply-name" name="thread99-reply1-box-name"></input>
+                <label for="thread99-reply-input-name-box" class="thread99-reply-input-name-label thread-reply-input-name-label">Name:</label>                
+                <input type="text" id="thread99-reply-input-name-box" class="thread99-reply-input-name-box thread-reply-input-name-box" name="thread99-reply-input-name-box"></input>
 
-                <label for="thread99-reply1-box">Reply:</label>
-                <textarea type="text" id="thread99-reply1-box" class="thread99-reply1 thread99-reply thread-reply" name="thread99-reply1-box"></textarea>
+                <label for="thread99-reply-input-box" class="thread99-reply-input-box-label thread-reply-input-box-label">Reply:</label>
+                <textarea type="text" id="thread99-reply-input-box" class="thread99-reply-input-box thread-reply-input-box" name="thread99-reply-input-box"></textarea>
+                <!-- send the thread number with the data -->
+                <input type="hidden" name="thread-number" value="99">                
 
-                <button class="thread99-reply-submit-button reply-submit-button" data-threadNumber="99" type="submit" value="Post Thread">Submit</button>
+                <button class="thread99-reply-submit-button thread-reply-submit-button" data-threadNumber="99" type="submit" value="Post Thread">Submit</button>
             </form>            
             <img class='thread99-garbage-button thread-garbage-button' src='img/garbage-can.svg' alt='Garbage Can 99'></img>
-            <h6 class='thread99-id thread-id'>thread # 99</h6>         
+            <h6 class='thread99-id thread-id'>thread # 99</h6>      
+            <div class="thread99-reply1 thread99-reply thread-reply">
+
+            </div>   
         </div>                   
 
     </div>

@@ -62,10 +62,9 @@
                 while($row = mysqli_fetch_assoc($result)){
                    //replace grave image with apostrophe
                    $title = $row["title"];
-                   $seller = $row["seller"];
+                   $creator = $row["creator"];
                    $date = $row["date"];
-                   $time = $row["time"];
-                   $price = $row["price"];
+                   $time = $row["time"];                   
                    $body = $row["body"];
                    $image_name = $row["image_name"];
                    $image_name2 = $row["image_name2"];
@@ -75,9 +74,8 @@
                    $id = $row["id"];
                    $email = $row["email"];
 
-
                    $title = convertApostrophe($title);
-                   $seller = convertApostrophe($seller);
+                   $creator = convertApostrophe($creator);
                 //    $date = convertApostrophe($date);
                    $body = convertApostrophe($body);
 
@@ -91,34 +89,32 @@
                         $image_name5 == ""){                        
                         $allEmpty = true;
                     }
+
                     //check if there are at least two images to display next and prev arrows
                     $atLeastTwo = false;
-                    $threadCount = 0;
+                    $imageCount = 0;
                     if($image_name != "") {
-                        $threadCount = $threadCount +1;
+                        $imageCount = $imageCount +1;
                     }
                     if($image_name2 != "") {
-                        $threadCount = $threadCount +1;
+                        $imageCount = $imageCount +1;
                     }
                     if($image_name3 != "") {
-                        $threadCount = $threadCount +1;
+                        $imageCount = $imageCount +1;
                     }
                     if($image_name4 != "") {
-                        $threadCount = $threadCount +1;
+                        $imageCount = $imageCount +1;
                     }
                     if($image_name5 != "") {
-                        $threadCount = $threadCount +1;
+                        $imageCount = $imageCount +1;
                     }
-                    if($threadCount >= 2) {
+                    if($imageCount >= 2) {
                         $atLeastTwo = true;                        
-                    }                    
-
+                    }
                     //see if e-mail is there
                     if($email == ""){
                         $emailEmpty = true;
                     }
-                    
-                    
                    echo 	"<div class='thread'>";
                    //thread Carousel                
                    echo     "<div class='thread$id-images thread-images' alt='0'>";
