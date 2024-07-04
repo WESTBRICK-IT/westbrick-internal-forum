@@ -6,10 +6,10 @@ const displayReplyGroup = function(threadNumber) {
     const thisReplyGroup = document.querySelector(".thread" + threadNumber + "-reply-input-group");
     const thisThread = document.querySelector(".thread" + threadNumber);    
     if(window.innerWidth < 900) {
-        thisReplyGroup.style.gridColumn = 1;
+        thisReplyGroup.style.gridColumn = 1/2;
         thisReplyGroup.style.gridRow = 6;
     } else {
-        thisReplyGroup.style.gridColumn = 2;
+        thisReplyGroup.style.gridColumn = 1/2;
         thisReplyGroup.style.gridRow = 4;
     }
     thisReplyGroup.style.display = "flex";

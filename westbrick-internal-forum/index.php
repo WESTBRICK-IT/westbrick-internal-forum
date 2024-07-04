@@ -15,7 +15,7 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <img class="main-title" src="img/westbrick-internal-market.svg" alt="Westbrick Internal Market Title">
+    <img class="main-title" src="img/westbrick-internal-forum.svg" alt="Westbrick Internal Forum Title">
     <button onclick="window.location.href='./PHP/new-thread.html'" class="post-thread-button" type="button">Post New thread</button>
     <div class="threads">
 
@@ -32,9 +32,6 @@
         </div>         -->
 
         <?php
-
-            
-
             $allowedIPs = array('206.174.198.58', '206.174.198.59', '50.99.132.206'); // Define the list of allowed IP addresses
 
             $remoteIP = $_SERVER['REMOTE_ADDR']; // Get the remote IP address of the client
@@ -49,7 +46,7 @@
 				return $newString; 
 			}
             // Connect to the database
-			 $conn = mysqli_connect("localhost", "cbarber", "!!!Dr0w554p!!!", "thread_db");
+			 $conn = mysqli_connect("localhost", "cbarber", "!!!Dr0w554p!!!", "threads_db");
 	 
 			 // Check connection
 			 if (!$conn) {
@@ -76,7 +73,7 @@
 
                    $title = convertApostrophe($title);
                    $creator = convertApostrophe($creator);
-                //    $date = convertApostrophe($date);
+                    //    $date = convertApostrophe($date);
                    $body = convertApostrophe($body);
 
                    //if image name is empty or not found then add default image
@@ -115,6 +112,7 @@
                     if($email == ""){
                         $emailEmpty = true;
                     }
+
                    echo 	"<div class='thread'>";
                    //thread Carousel                
                    echo     "<div class='thread$id-images thread-images' alt='0'>";

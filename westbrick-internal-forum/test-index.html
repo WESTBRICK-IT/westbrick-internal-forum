@@ -50,23 +50,163 @@
             </div>                         
             <button class="thread-reply-button99 thread-reply-button" data-threadNumber="99">Reply</button>
             <form class="thread99-reply-input-group thread-reply-input-group" data-replyDivExtended="false" method="post" action="./PHP/submit-reply.php" enctype="multipart/form-data">
+
+                <label for="thread99-reply-input-title-box" class="thread99-reply-input-title-label thread-reply-input-title-label">Title:</label>                
+                <input type="text" id="thread99-reply-input-title-box" class="thread99-reply-input-title-box thread-reply-input-title-box" name="thread99-reply-input-name-box"></input>
                 
                 <label for="thread99-reply-input-name-box" class="thread99-reply-input-name-label thread-reply-input-name-label">Name:</label>                
                 <input type="text" id="thread99-reply-input-name-box" class="thread99-reply-input-name-box thread-reply-input-name-box" name="thread99-reply-input-name-box"></input>
 
                 <label for="thread99-reply-input-box" class="thread99-reply-input-box-label thread-reply-input-box-label">Reply:</label>
-                <textarea type="text" id="thread99-reply-input-box" class="thread99-reply-input-box thread-reply-input-box" name="thread99-reply-input-box"></textarea>
+                <textarea type="text" id="thread99-reply-input-box" class="thread99-reply-input-box thread-reply-body-input-box" name="thread99-reply-input-box"></textarea>
                 <!-- send the thread number with the data -->
                 <input type="hidden" name="thread-number" value="99">                
 
                 <button class="thread99-reply-submit-button thread-reply-submit-button" data-threadNumber="99" type="submit" value="Post Thread">Submit</button>
             </form>            
             <img class='thread99-garbage-button thread-garbage-button' src='img/garbage-can.svg' alt='Garbage Can 99'></img>
-            <h6 class='thread99-id thread-id'>thread # 99</h6>      
-            <div class="thread99-reply1 thread99-reply thread-reply">
+            <h6 class='thread99-id thread-id'>Thread #99</h6>      
+            <div class="thread99-replies thread-replies">
+                <div class="thread99-reply1 thread99-reply thread-reply">
+                    <div class="thread-reply-image-container">
+                        <img class="thread99-reply1-image thread99-reply-image thread-reply-image" alt="Thread #99 Reply Image" onclick="window.location.href = 'img/motorcycle-1.jpg';" src="./img/motorcycle-1.jpg"></img>
+                    </div>                        
+                    <div class="thread99-reply1-text thread99-reply-text thread-reply-text">
+                        <h3 class="thread99-reply1-title thread99-reply-title thread-reply-title">This is the Title of the Reply</h3>
+                        <h5 class="thread99-reply1-name thread99-reply-name thread-reply-name">Jim Bob</h5>
+                        <h5 class="thread99-reply1-date thread99-reply-date thread-reply-date">June 19th 2024</h5>
+                        <h5 class="thread99-reply1-time thread99-reply-time thread-reply-time">14:41:40</h5>
+                        <p class="thread99-reply1-body thread99-reply-body thread-reply-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, maxime soluta ex blanditiis hic ut sapiente aperiam labore qui, iure, impedit quod commodi aspernatur dolorem ratione non voluptatum beatae veniam!</p>                        
+                    </div>
+                    <h6 class="thread99-reply1-number-display thread99-reply-number-display thread-reply-number-display">Reply #1</h6>
+                    <img class='thread99-reply1-garbage-button thread99-reply-garbage-button thread-reply-garbage-button' src='img/garbage-can.svg' alt='Garbage Can 99'></img>
+                </div>
+                <div class="thread99-reply2 thread99-reply thread-reply">
+                    <div class="thread-reply-image-container">
+                        <img class="thread99-reply2-image thread99-reply-image thread-reply-image" alt="Thread #99 Reply Image" onclick="window.location.href = 'img/motorcycle-2.jpg';" src="./img/motorcycle-2.jpg"></img>
+                    </div>
+                    <div class="thread99-reply1-text thread99-reply-text thread-reply-text">
+                        <h3 class="thread99-reply1-title thread99-reply-title thread-reply-title">This is the Title of the Reply</h3>
+                        <h5 class="thread99-reply2-name thread99-reply-name thread-reply-name">John Doe</h5>
+                        <h5 class="thread99-reply2-date thread99-reply-date thread-reply-date">June 19th 2024</h5>
+                        <h5 class="thread99-reply2-time thread99-reply-time thread-reply-time">14:41:40</h5>
+                        <p class="thread99-reply2-body thread99-reply-body thread-reply-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, maxime soluta ex blanditiis hic ut sapiente aperiam labore qui, iure, impedit quod commodi aspernatur dolorem ratione non voluptatum beatae veniam!</p>                        
+                    </div>
+                    <h6 class="thread99-reply2-number-display thread99-reply-number-display thread-reply-number-display">Reply #2</h6>
+                    <img class='thread99-reply2-garbage-button thread99-reply-garbage-button thread-reply-garbage-button' src='img/garbage-can.svg' alt='Garbage Can 99'></img>
+                </div>
+                <div class="thread99-reply3 thread99-reply thread-reply">
+                    <div class="thread-reply-image-container">
+                        <img class="thread99-reply3-image thread99-reply-image thread-reply-image" alt="Thread #99 Reply Image" onclick="window.location.href = 'img/motorcycle-3.jpg';" src="./img/motorcycle-3.jpg"></img>
+                    </div>
+                    <div class="thread99-reply1-text thread99-reply-text thread-reply-text">
+                        <h3 class="thread99-reply1-title thread99-reply-title thread-reply-title">This is the Title of the Reply</h3>
+                        <h5 class="thread99-reply3-name thread99-reply-name thread-reply-name">Harry Tom Sally</h5>
+                        <h5 class="thread99-reply3-date thread99-reply-date thread-reply-date">June 19th 2024</h5>
+                        <h5 class="thread99-reply3-time thread99-reply-time thread-reply-time">14:41:40</h5>
+                        <p class="thread99-reply3-body thread99-reply-body thread-reply-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, maxime soluta ex blanditiis hic ut sapiente aperiam labore qui, iure, impedit quod commodi aspernatur dolorem ratione non voluptatum beatae veniam!</p>                        
+                    </div>
+                    <h6 class="thread99-reply3-number-display thread99-reply-number-display thread-reply-number-display">Reply #3</h6>
+                    <img class='thread99-reply3-garbage-button thread99-reply-garbage-button thread-reply-garbage-button' src='img/garbage-can.svg' alt='Garbage Can 99'></img>
+                </div>
+            </div>
+        </div>   
+        
+        
+        <div class='thread100 thread'>            
+            <!-- using this alt number as indices, do not remove -->
+            <div class='thread100-images thread-images' alt='0'>
+                <div alt='0'>
+                    <img class="thread100-image1 thread-image1 thread-image" onclick="window.location.href = 'img/motorcycle-1.jpg';" src="./img/motorcycle-1.jpg" style="width:100%"></img>
+                </div>
+                <div alt='0'>
+                    <img class="thread100-image2 thread-image2 thread-image" onclick="window.location.href = 'img/motorcycle-2.jpg';" src="./img/motorcycle-2.jpg" style="width:100%"></img>
+                </div>
+                <div alt='0'>
+                    <img class="thread100-image3 thread-image3 thread-image" onclick="window.location.href = 'img/motorcycle-3.jpg';" src="./img/motorcycle-3.jpg" style="width:100%"></img>
+                </div>            
+                <div alt='0'>
+                    <img class="thread100-image4 thread-image4 thread-image" onclick="window.location.href = 'img/motorcycle-4.webp';" src="./img/motorcycle-4.webp" style="width:100%"></img>
+                </div>
+                <div alt='0'>
+                    <img class="thread100-image5 thread-image5 thread-image" onclick="window.location.href = 'img/motorcycle-5.webp';" src="./img/motorcycle-5.webp" style="width:100%"></img>
+                </div>            
+                <a class='prev' onclick='prevSlide(100)'>&#10094;</a>
+                <a class='next' onclick='nextSlide(100)'>&#10095;</a>
+            </div>            
+            <div class='top-middle-things'>
+                <h1 class='thread-title'>Motorcycle Discussion</h1>
+                <h4 class='thread-creator'>Chris Barber</h4>            
+                <h4><a href='mailto:$email' class='thread-seller-email'>cbarber@westbrick.ca</a></h4>
+                <h5 class='thread-posting-date'>June 19th 2024</h5>
+                <h5 class='thread-posting-date'>14:41:40</h5>
+            </div>
+            <div class='thread-body'>
+                <p class='thread-body'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>                         
+            <button class="thread-reply-button100 thread-reply-button" data-threadNumber="100">Reply</button>
+            <form class="thread100-reply-input-group thread-reply-input-group" data-replyDivExtended="false" method="post" action="./PHP/submit-reply.php" enctype="multipart/form-data">
 
-            </div>   
-        </div>                   
+                <label for="thread100-reply-input-title-box" class="thread100-reply-input-title-label thread-reply-input-title-label">Title:</label>                
+                <input type="text" id="thread100-reply-input-title-box" class="thread100-reply-input-title-box thread-reply-input-title-box" name="thread100-reply-input-name-box"></input>
+                
+                <label for="thread100-reply-input-name-box" class="thread100-reply-input-name-label thread-reply-input-name-label">Name:</label>                
+                <input type="text" id="thread100-reply-input-name-box" class="thread100-reply-input-name-box thread-reply-input-name-box" name="thread100-reply-input-name-box"></input>
+
+                <label for="thread100-reply-input-box" class="thread100-reply-input-box-label thread-reply-input-box-label">Reply:</label>
+                <textarea type="text" id="thread100-reply-input-box" class="thread100-reply-input-box thread-reply-body-input-box" name="thread100-reply-input-box"></textarea>
+                <!-- send the thread number with the data -->
+                <input type="hidden" name="thread-number" value="100">                
+
+                <button class="thread100-reply-submit-button thread-reply-submit-button" data-threadNumber="100" type="submit" value="Post Thread">Submit</button>
+            </form>            
+            <img class='thread100-garbage-button thread-garbage-button' src='img/garbage-can.svg' alt='Garbage Can 100'></img>
+            <h6 class='thread100-id thread-id'>Thread # 100</h6>      
+            <div class="thread100-replies thread-replies">
+                <div class="thread100-reply1 thread100-reply thread-reply">
+                    <div class="thread-reply-image-container">
+                        <img class="thread100-reply1-image thread100-reply-image thread-reply-image" alt="Thread #100 Reply Image" onclick="window.location.href = 'img/motorcycle-1.jpg';" src="./img/motorcycle-1.jpg"></img>
+                    </div>                        
+                    <div class="thread100-reply1-text thread100-reply-text thread-reply-text">
+                        <h3 class="thread100-reply1-title thread100-reply-title thread-reply-title">This is the Title of the Reply</h3>
+                        <h5 class="thread100-reply1-name thread100-reply-name thread-reply-name">Jim Bob</h5>
+                        <h5 class="thread100-reply1-date thread100-reply-date thread-reply-date">June 19th 2024</h5>
+                        <h5 class="thread100-reply1-time thread100-reply-time thread-reply-time">14:41:40</h5>
+                        <p class="thread100-reply1-body thread100-reply-body thread-reply-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, maxime soluta ex blanditiis hic ut sapiente aperiam labore qui, iure, impedit quod commodi aspernatur dolorem ratione non voluptatum beatae veniam!</p>                        
+                    </div>
+                    <h6 class="thread100-reply1-number-display thread100-reply-number-display thread-reply-number-display">Reply #1</h6>
+                    <img class='thread100-reply1-garbage-button thread100-reply-garbage-button thread-reply-garbage-button' src='img/garbage-can.svg' alt='Garbage Can 100'></img>
+                </div>
+                <div class="thread100-reply2 thread100-reply thread-reply">
+                    <div class="thread-reply-image-container">
+                        <img class="thread100-reply2-image thread100-reply-image thread-reply-image" alt="Thread #100 Reply Image" onclick="window.location.href = 'img/motorcycle-2.jpg';" src="./img/motorcycle-2.jpg"></img>
+                    </div>
+                    <div class="thread100-reply1-text thread100-reply-text thread-reply-text">
+                        <h3 class="thread100-reply1-title thread100-reply-title thread-reply-title">This is the Title of the Reply</h3>
+                        <h5 class="thread100-reply2-name thread100-reply-name thread-reply-name">John Doe</h5>
+                        <h5 class="thread100-reply2-date thread100-reply-date thread-reply-date">June 19th 2024</h5>
+                        <h5 class="thread100-reply2-time thread100-reply-time thread-reply-time">14:41:40</h5>
+                        <p class="thread100-reply2-body thread100-reply-body thread-reply-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, maxime soluta ex blanditiis hic ut sapiente aperiam labore qui, iure, impedit quod commodi aspernatur dolorem ratione non voluptatum beatae veniam!</p>                        
+                    </div>
+                    <h6 class="thread100-reply2-number-display thread100-reply-number-display thread-reply-number-display">Reply #2</h6>
+                    <img class='thread100-reply2-garbage-button thread100-reply-garbage-button thread-reply-garbage-button' src='img/garbage-can.svg' alt='Garbage Can 100'></img>
+                </div>
+                <div class="thread100-reply3 thread100-reply thread-reply">
+                    <div class="thread-reply-image-container">
+                        <img class="thread100-reply3-image thread100-reply-image thread-reply-image" alt="Thread #100 Reply Image" onclick="window.location.href = 'img/motorcycle-3.jpg';" src="./img/motorcycle-3.jpg"></img>
+                    </div>
+                    <div class="thread100-reply1-text thread100-reply-text thread-reply-text">
+                        <h3 class="thread100-reply1-title thread100-reply-title thread-reply-title">This is the Title of the Reply</h3>
+                        <h5 class="thread100-reply3-name thread100-reply-name thread-reply-name">Harry Tom Sally</h5>
+                        <h5 class="thread100-reply3-date thread100-reply-date thread-reply-date">June 19th 2024</h5>
+                        <h5 class="thread100-reply3-time thread100-reply-time thread-reply-time">14:41:40</h5>
+                        <p class="thread100-reply3-body thread100-reply-body thread-reply-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, maxime soluta ex blanditiis hic ut sapiente aperiam labore qui, iure, impedit quod commodi aspernatur dolorem ratione non voluptatum beatae veniam!</p>                        
+                    </div>
+                    <h6 class="thread100-reply3-number-display thread100-reply-number-display thread-reply-number-display">Reply #3</h6>
+                    <img class='thread100-reply3-garbage-button thread100-reply-garbage-button thread-reply-garbage-button' src='img/garbage-can.svg' alt='Garbage Can 100'></img>
+                </div>
+            </div>
+        </div>          
 
     </div>
 </body>
