@@ -10,7 +10,7 @@
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <img class="main-title" src="../img/internal-market.svg" alt="Westbrick Internal Market Title">
+    <img class="main-title" src="../img/westbrick-internal-forum" alt="Westbrick Internal Forum Title">
       
     <?php
         $allowedIPs = array('206.174.198.58', '206.174.198.59', '50.99.132.206'); // Define the list of allowed IP addresses

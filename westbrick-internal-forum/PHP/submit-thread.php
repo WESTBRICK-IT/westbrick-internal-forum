@@ -10,7 +10,7 @@
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <img class="main-title" src="../img/westbrick-internal-market.svg" alt="Westbrick Internal Market Title">
+    <img class="main-title" src="../img/westbrick-internal-forum.svg" alt="Westbrick Internal Forum Title">
       
     <?php
         $allowedIPs = array('206.174.198.58', '206.174.198.59', '50.99.132.206'); // Define the list of allowed IP addresses
@@ -55,96 +55,96 @@
         $body = convertApostrophe($body);            
         
 
-        //get the first image and upload it
-        $image_name = $_FILES['image']['name'];
-        $image_tmp = $_FILES['image']['tmp_name'];          
-        // echo "<h1>Image Name: $image_name " . "Image tmp: $image_tmp</h1>";
-        $target_dir = "../img/thread-images/";
-        $target_file = $target_dir . basename($image_name);        
-        // move_uploaded_file($image_tmp, $target_file);
+        //get the first file and upload it
+        $file_name = $_FILES['file']['name'];
+        $file_tmp = $_FILES['file']['tmp_name'];          
+        // echo "<h1>file Name: $file_name " . "file tmp: $file_tmp</h1>";
+        $target_dir = "../img/thread-files/";
+        $target_file = $target_dir . basename($file_name);        
+        // move_uploaded_file($file_tmp, $target_file);
         //chek if error
-        if(!move_uploaded_file($image_tmp, $target_file)){
+        if(!move_uploaded_file($file_tmp, $target_file)){
             $error = error_get_last();
             // echo 'Error: ' . $error['message'];
         }
         else {
             // echo "<h1>Successfully Uploaded</h1>";
         }
-        //end of first image upload
+        //end of first file upload
 
 
-        //get the second image and upload it
-        $image_name2 = $_FILES['image2']['name'];
-        $image_tmp2 = $_FILES['image2']['tmp_name'];         
-        // echo "<h1>Image Name: $image_name " . "Image tmp: $image_tmp</h1>";
-        $target_dir2 = "../img/thread-images/";
-        $target_file2 = $target_dir2 . basename($image_name2);        
-        // move_uploaded_file($image_tmp, $target_file);
+        //get the second file and upload it
+        $file_name2 = $_FILES['file2']['name'];
+        $file_tmp2 = $_FILES['file2']['tmp_name'];         
+        // echo "<h1>file Name: $file_name " . "file tmp: $file_tmp</h1>";
+        $target_dir2 = "../img/thread-files/";
+        $target_file2 = $target_dir2 . basename($file_name2);        
+        // move_uploaded_file($file_tmp, $target_file);
         //chek if error
-        if(!move_uploaded_file($image_tmp2, $target_file2)){
+        if(!move_uploaded_file($file_tmp2, $target_file2)){
             $error = error_get_last();
             // echo 'Error: ' . $error['message'];
         }
         else {
             // echo "<h1>Successfully Uploaded</h1>";
         }
-        //end of second image upload
+        //end of second file upload
 
-        //get the third image and upload it
-        $image_name3 = $_FILES['image3']['name'];
-        $image_tmp3 = $_FILES['image3']['tmp_name'];         
-        // echo "<h1>Image Name: $image_name " . "Image tmp: $image_tmp</h1>";
-        $target_dir3 = "../img/thread-images/";
-        $target_file3 = $target_dir3 . basename($image_name3);        
-        // move_uploaded_file($image_tmp, $target_file);
+        //get the third file and upload it
+        $file_name3 = $_FILES['file3']['name'];
+        $file_tmp3 = $_FILES['file3']['tmp_name'];         
+        // echo "<h1>file Name: $file_name " . "file tmp: $file_tmp</h1>";
+        $target_dir3 = "../img/thread-files/";
+        $target_file3 = $target_dir3 . basename($file_name3);        
+        // move_uploaded_file($file_tmp, $target_file);
         //chek if error
-        if(!move_uploaded_file($image_tmp3, $target_file3)){
+        if(!move_uploaded_file($file_tmp3, $target_file3)){
             $error = error_get_last();
             // echo 'Error: ' . $error['message'];
         }
         else {
             // echo "<h1>Successfully Uploaded</h1>";
         }
-        //end of third image upload
+        //end of third file upload
 
-        //get the fourth image and upload it
-        $image_name4 = $_FILES['image4']['name'];
-        $image_tmp4 = $_FILES['image4']['tmp_name'];         
-        // echo "<h1>Image Name: $image_name " . "Image tmp: $image_tmp</h1>";
-        $target_dir4 = "../img/thread-images/";
-        $target_file4 = $target_dir4 . basename($image_name4);        
-        // move_uploaded_file($image_tmp, $target_file);
+        //get the fourth file and upload it
+        $file_name4 = $_FILES['file4']['name'];
+        $file_tmp4 = $_FILES['file4']['tmp_name'];         
+        // echo "<h1>file Name: $file_name " . "file tmp: $file_tmp</h1>";
+        $target_dir4 = "../img/thread-files/";
+        $target_file4 = $target_dir4 . basename($file_name4);        
+        // move_uploaded_file($file_tmp, $target_file);
         //chek if error
-        if(!move_uploaded_file($image_tmp4, $target_file4)){
+        if(!move_uploaded_file($file_tmp4, $target_file4)){
             $error = error_get_last();
             // echo 'Error: ' . $error['message'];
         }
         else {
             // echo "<h1>Successfully Uploaded</h1>";
         }
-        //end of fourth image upload
+        //end of fourth file upload
 
-        //get the fifth image and upload it
-        $image_name5 = $_FILES['image5']['name'];
-        $image_tmp5 = $_FILES['image5']['tmp_name'];         
-        // echo "<h1>Image Name: $image_name " . "Image tmp: $image_tmp</h1>";
-        $target_dir5 = "../img/thread-images/";
-        $target_file5 = $target_dir5 . basename($image_name5);        
-        // move_uploaded_file($image_tmp, $target_file);
+        //get the fifth file and upload it
+        $file_name5 = $_FILES['file5']['name'];
+        $file_tmp5 = $_FILES['file5']['tmp_name'];         
+        // echo "<h1>file Name: $file_name " . "file tmp: $file_tmp</h1>";
+        $target_dir5 = "../img/thread-files/";
+        $target_file5 = $target_dir5 . basename($file_name5);        
+        // move_uploaded_file($file_tmp, $target_file);
         //chek if error
-        if(!move_uploaded_file($image_tmp5, $target_file5)){
+        if(!move_uploaded_file($file_tmp5, $target_file5)){
             $error = error_get_last();
             // echo 'Error: ' . $error['message'];
         }
         else {
             // echo "<h1>Successfully Uploaded</h1>";
         }
-        //end of fifth image upload
+        //end of fifth file upload
 
        //replace carriage return with paragraph
         $body = str_replace(chr(13), "</p><p class=`thread-body`>", $body); 
         
-        $sql = "INSERT INTO threads (title, creator, date, body, image_name, image_name2, image_name3, image_name4, image_name5, time, email) VALUES ('$title', '$creator', '$date', '$body', '$image_name', '$image_name2', '$image_name3', '$image_name4', '$image_name5', '$time', '$email')";
+        $sql = "INSERT INTO threads (title, creator, date, body, file_name1, file_name2, file_name3, file_name4, file_name5, time, email) VALUES ('$title', '$creator', '$date', '$body', '$file_name1', '$file_name2', '$file_name3', '$file_name4', '$file_name5', '$time', '$email')";
         // $sql = "INSERT INTO articles (title, author, body, date) VALUES ('$title', '$author', '$body', '$date')";
         
         if ($conn->query($sql) === TRUE) {
@@ -153,7 +153,7 @@
             echo    "<img class='westbrick-success-svg' src='../img/thread-submitted-successfully.svg' alt='WESTBRICK SUCCESS SVG'>";
             echo    "<button class='home-button' type='button' onclick='window.location.href=`../index.php`;'>Home</button>";
             echo "</div>";
-            // echo "<br><h1>File name: $image" . "File tmp name: $image_tmp" . "</h1>";
+            // echo "<br><h1>File name: $file" . "File tmp name: $file_tmp" . "</h1>";
             // Set the time delay in seconds
             // $timeDelay = 5; // 5 seconds
             // Wait for the specified amount of time before redirecting

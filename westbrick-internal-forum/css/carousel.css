@@ -9,11 +9,11 @@
   margin: auto;  
 }
 
-/* Hide the images by default */
-.thread-image {
+/* Hide the files by default */
+.thread-file {
   display: none;
 }
-.thread-image1 {
+.thread-file1 {
   /* display: block; */
 }
 /* Next & previous buttons */

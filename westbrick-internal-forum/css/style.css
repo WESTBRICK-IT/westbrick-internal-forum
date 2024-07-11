@@ -49,7 +49,7 @@ html{
 .thread h1 {
     margin-top: 0;
 }
-.thread-image {
+.thread-file {
     max-width: 100%;
     height: auto;
     max-width: 250px;
@@ -62,7 +62,7 @@ html{
     margin-right: 24px;
     align-items: center;
 }
-.thread-images {
+.thread-files {
     max-width: 100%;
     height: auto;
     max-width: 250px;
@@ -242,7 +242,7 @@ html{
 .submit-button:hover {
     background-color: rgb( 220, 164, 19);
 }
-.upload-image-button:hover {
+.upload-file-button:hover {
     background-color: rgb( 220, 164, 19);
 }
 .post-thread-title {
@@ -323,14 +323,14 @@ input[type=number] {
     grid-column: 1/4;
     grid-row: 5;
 }
-.thread-reply-image-container {
+.thread-reply-file-container {
     display: flex;
     align-items: center;
     justify-content: center;
     grid-row: 1;
     grid-column: 1;
 }
-.thread-reply-image {    
+.thread-reply-file {    
     max-width: 200px;    
     border-color: black;
     border-style: solid;
@@ -381,7 +381,7 @@ h3, h4, h5 {
         grid-row: 1;
         grid-column: 2 / 3;
     }
-    .thread-images {
+    .thread-files {
         grid-row: 1;
     }
     .forum {
@@ -465,7 +465,7 @@ h3, h4, h5 {
     .top-middle-things {
         grid-row: 1;
     }
-    .thread-images {
+    .thread-files {
         grid-row: 1;
     }
     
@@ -475,7 +475,7 @@ h3, h4, h5 {
         margin-left: 5px;
         margin-right: 5px;
     }
-    .thread-images {        
+    .thread-files {        
         max-width: 95%; 
         grid-column: 1; 
         margin-right: 0px;  
