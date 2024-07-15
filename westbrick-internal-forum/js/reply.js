@@ -86,6 +86,7 @@ const hideReplyThings = function(threadNumber) {
 }
 const replyButtonClick = function() {    
     //get the reply extended state
+    console.log("reply button click");
     const threadNumber = this.dataset.threadnumber;
     const replyDiv = document.querySelector(".thread"+ threadNumber +"-reply-input-group");    
     let replyDivExtendedState = replyDiv.dataset.replydivextended;

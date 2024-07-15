@@ -56,14 +56,15 @@
         
 
         //get the first file and upload it
-        $file_name = $_FILES['file']['name'];
-        $file_tmp = $_FILES['file']['tmp_name'];          
-        // echo "<h1>file Name: $file_name " . "file tmp: $file_tmp</h1>";
-        $target_dir = "../img/thread-files/";
-        $target_file = $target_dir . basename($file_name);        
+        $file_name1 = $_FILES['file1']['name'];
+        $file_tmp1 = $_FILES['file1']['tmp_name'];          
+        echo "<h1>file Name: $file_name1 " . "file tmp: $file_tmp1</h1>";
+        $target_dir1 = "../files/thread-files/";
+        $target_file1 = $target_dir1 . basename($file_name1);        
+        echo "<h1>Target dir: $target_dir1 " . "Target File: $target_file1</h1>";
         // move_uploaded_file($file_tmp, $target_file);
         //chek if error
-        if(!move_uploaded_file($file_tmp, $target_file)){
+        if(!move_uploaded_file($file_tmp1, $target_file1)){
             $error = error_get_last();
             // echo 'Error: ' . $error['message'];
         }
@@ -77,7 +78,7 @@
         $file_name2 = $_FILES['file2']['name'];
         $file_tmp2 = $_FILES['file2']['tmp_name'];         
         // echo "<h1>file Name: $file_name " . "file tmp: $file_tmp</h1>";
-        $target_dir2 = "../img/thread-files/";
+        $target_dir2 = "../files/thread-files/";
         $target_file2 = $target_dir2 . basename($file_name2);        
         // move_uploaded_file($file_tmp, $target_file);
         //chek if error
@@ -94,7 +95,7 @@
         $file_name3 = $_FILES['file3']['name'];
         $file_tmp3 = $_FILES['file3']['tmp_name'];         
         // echo "<h1>file Name: $file_name " . "file tmp: $file_tmp</h1>";
-        $target_dir3 = "../img/thread-files/";
+        $target_dir3 = "../files/thread-files/";
         $target_file3 = $target_dir3 . basename($file_name3);        
         // move_uploaded_file($file_tmp, $target_file);
         //chek if error
@@ -111,7 +112,7 @@
         $file_name4 = $_FILES['file4']['name'];
         $file_tmp4 = $_FILES['file4']['tmp_name'];         
         // echo "<h1>file Name: $file_name " . "file tmp: $file_tmp</h1>";
-        $target_dir4 = "../img/thread-files/";
+        $target_dir4 = "../files/thread-files/";
         $target_file4 = $target_dir4 . basename($file_name4);        
         // move_uploaded_file($file_tmp, $target_file);
         //chek if error
@@ -128,7 +129,7 @@
         $file_name5 = $_FILES['file5']['name'];
         $file_tmp5 = $_FILES['file5']['tmp_name'];         
         // echo "<h1>file Name: $file_name " . "file tmp: $file_tmp</h1>";
-        $target_dir5 = "../img/thread-files/";
+        $target_dir5 = "../files/thread-files/";
         $target_file5 = $target_dir5 . basename($file_name5);        
         // move_uploaded_file($file_tmp, $target_file);
         //chek if error

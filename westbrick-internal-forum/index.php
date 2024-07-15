@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/carousel.css?v=1.02">
     <script src="js/script.js" defer></script>
     <script src="js/carousel.js" defer></script>
+    <script src="js/reply.js" defer></script>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -136,7 +137,7 @@
                     if($file_name3 != "") {
                     echo    "       <div alt='0'>";
         //         <div alt='0'>
-                    echo    "           <img class='thread$id-file2 thread-file2 thread-file' onclick='window.location.href = `files/thread-files/$file_name3`;' src='./files/thread-files/$file_name3' style='width:100%'></img>";
+                    echo    "           <img class='thread$id-file3 thread-file3 thread-file' onclick='window.location.href = `files/thread-files/$file_name3`;' src='./files/thread-files/$file_name3' style='width:100%'></img>";
         //             <img class="thread99-file3 thread-file3 thread-file" onclick="window.location.href = 'img/motorcycle-3.jpg';" src="./img/motorcycle-3.jpg" style="width:100%"></img>
                     echo    "       </div>";
         //         </div>            
@@ -144,7 +145,7 @@
                     if($file_name4 != "") {
                     echo    "       <div alt='0'>";
         //         <div alt='0'>
-                    echo    "           <img class='thread$id-file2 thread-file2 thread-file' onclick='window.location.href = `files/thread-files/$file_name4`;' src='./files/thread-files/$file_name4' style='width:100%'></img>";
+                    echo    "           <img class='thread$id-file4 thread-file4 thread-file' onclick='window.location.href = `files/thread-files/$file_name4`;' src='./files/thread-files/$file_name4' style='width:100%'></img>";
         //             <img class="thread99-file3 thread-file3 thread-file" onclick="window.location.href = 'img/motorcycle-3.jpg';" src="./img/motorcycle-3.jpg" style="width:100%"></img>
                     echo    "       </div>";
         //         </div>            
@@ -152,14 +153,14 @@
                     if($file_name5 != "") {
                     echo    "       <div alt='0'>";
         //         <div alt='0'>
-                    echo    "           <img class='thread$id-file2 thread-file2 thread-file' onclick='window.location.href = `files/thread-files/$file_name5`;' src='./files/thread-files/$file_name5' style='width:100%'></img>";
+                    echo    "           <img class='thread$id-file5 thread-file5 thread-file' onclick='window.location.href = `files/thread-files/$file_name5`;' src='./files/thread-files/$file_name5' style='width:100%'></img>";
         //             <img class="thread99-file3 thread-file3 thread-file" onclick="window.location.href = 'img/motorcycle-3.jpg';" src="./img/motorcycle-3.jpg" style="width:100%"></img>
                     echo    "       </div>";
         //         </div>            
                     }
                     if($allEmpty) {
                     echo    "       <div alt='0'>";
-                    echo    "           <img class='item$id-image5 item-image' onclick='window.location.href = `img/item-images/" . $westbrickSVG . "`;' src='./img/item-images/". $westbrickSVG . "' alt='Item Image' style='width:100%'></img>";
+                    echo    "           <img class='thread$id-file1 thread-file' onclick='window.location.href = `img/thread-files/" . $westbrickSVG . "`;' src='./img/thread-files/". $westbrickSVG . "' alt='Thread File' style='width:100%'></img>";
                     echo    "       </div>";
                     }
                     //If there is at least two images then add arrows
@@ -264,7 +265,6 @@
             // Close connection
             mysqli_close($conn);
         ?>
-        
     </div>    
 </body>
 </html>
