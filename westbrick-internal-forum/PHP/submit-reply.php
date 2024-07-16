@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Westbrick Internal Marketplace Thread Submitted</title>
+    <title>Westbrick Internal Forum Thread Reply Submitted</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/script.js" defer></script>
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
@@ -37,9 +37,10 @@
             die("Connection failed: " . $conn->connect_error);
         }    
         //get the amount of replies
+        echo "<h1>Thread Number: $threadNumber</h1>";
         $query = "SELECT number_of_replies FROM threads WHERE id = " . $threadNumber;
         $result = mysqli_query($conn, $query);
-        echo "<h1>$result</h1>";
+        echo "<h1>Result: $result</h1>";
         
         $name = $_POST['name'];
         $body = $_POST['body'];        
@@ -58,8 +59,8 @@
        //replace carriage return with paragraph
         $body = str_replace(chr(13), "</p><p class=`thread-body`>", $body); 
         
-        $sqlNewColumns= "ALTER TABLE threads ADD COLUMN reply" + $replyNumber + "_name INT(255), ADD COLUMN reply" + $replyNumber + "_date DATE, ADD COLUMN reply" + $replyNumber + "_body TEXT, ADD COLUMN reply" + $replyNumber + "_time TIME;";
-        $sql = "INSERT INTO threads (reply" + $replyNumber + "_name, reply" + $replyNumber + "_date, reply" + $replyNumber + "_body, reply" + $replyNumber + "_time) VALUES ('$name', '$date', '$body', '$time')";
+        $sqlNewColumns= "ALTER TABLE threads ADD COLUMN reply" . $replyNumber . "_name INT(255), ADD COLUMN reply" . $replyNumber . "_date DATE, ADD COLUMN reply" . $replyNumber . "_body TEXT, ADD COLUMN reply" . $replyNumber . "_time TIME;";
+        $sql = "INSERT INTO threads (reply" . $replyNumber . "_name, reply" . $replyNumber . "_date, reply" . $replyNumber . "_body, reply" . $replyNumber . "_time) VALUES ('$name', '$date', '$body', '$time')";
                 
         if ($conn->query($sql) === TRUE) {
             // echo "<h1>Article $title submitted successfully! Redirecting to articles page in 5 seconds.</h1>";

@@ -7,7 +7,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>Westbrick Internal Marketplace</title>
+    <title>Westbrick Internal Forum</title>
     <link rel="stylesheet" href="css/style.css?v=1.02">
     <link rel="stylesheet" href="css/carousel.css?v=1.02">
     <script src="js/script.js" defer></script>
@@ -113,54 +113,36 @@
                         $emailEmpty = true;
                     }
                     // Start the thread!! LET"SS GOOOOOOO
-                    echo    "<div class='thread$id thread'>";
-        //             <div class='thread99 thread'>       
-                    echo    "   <div class='thread$id-files thread-files' alt='0'>";
-        //     <!-- using this alt number as indices, do not remove -->
-        //     <div class='thread99-files thread-files' alt='0'>
+                    echo    "<div class='thread$id thread'>";           
+                    echo    "   <div class='thread$id-files thread-files' alt='0'>";        
                     if($file_name1 != "") {
-                    echo    "       <div alt='0'>";
-        //         <div alt='0'>
-                    echo    "           <img class='thread$id-file1 thread-file1 thread-file' onclick='window.location.href = `files/thread-files/$file_name1`;' src='./files/thread-files/$file_name1' style='width:100%'></img>";
-        //             <img class="thread99-file1 thread-file1 thread-file" onclick="window.location.href = 'img/motorcycle-1.jpg';" src="./img/motorcycle-1.jpg" style="width:100%"></img>
-                    echo    "       </div>";
-        //         </div>
+                    echo    "       <div alt='0'>";        
+                    echo    "           <img class='thread$id-file1 thread$id-file thread-file1 thread-file' onclick='window.location.href = `files/thread-files/$file_name1`;' src='./files/thread-files/$file_name1' style='width:100%'></img>";        
+                    echo    "       </div>";        
                     }
                     if($file_name2 != "") {
-                    echo    "       <div alt='0'>";
-        //         <div alt='0'>
-                    echo    "           <img class='thread$id-file2 thread-file2 thread-file' onclick='window.location.href = `files/thread-files/$file_name2`;' src='./files/thread-files/$file_name2' style='width:100%'></img>";
-        //             <img class="thread99-file2 thread-file2 thread-file" onclick="window.location.href = 'img/motorcycle-2.jpg';" src="./img/motorcycle-2.jpg" style="width:100%"></img>
+                    echo    "       <div alt='0'>";        
+                    echo    "           <img class='thread$id-file2 thread$id-file thread-file2 thread-file' onclick='window.location.href = `files/thread-files/$file_name2`;' src='./files/thread-files/$file_name2' style='width:100%'></img>";        
                     echo    "       </div>";
-                    }
-        //         </div>
+                    }        
                     if($file_name3 != "") {
-                    echo    "       <div alt='0'>";
-        //         <div alt='0'>
-                    echo    "           <img class='thread$id-file3 thread-file3 thread-file' onclick='window.location.href = `files/thread-files/$file_name3`;' src='./files/thread-files/$file_name3' style='width:100%'></img>";
-        //             <img class="thread99-file3 thread-file3 thread-file" onclick="window.location.href = 'img/motorcycle-3.jpg';" src="./img/motorcycle-3.jpg" style="width:100%"></img>
-                    echo    "       </div>";
-        //         </div>            
+                    echo    "       <div alt='0'>";        
+                    echo    "           <img class='thread$id-file3 thread$id-file thread-file3 thread-file' onclick='window.location.href = `files/thread-files/$file_name3`;' src='./files/thread-files/$file_name3' style='width:100%'></img>";        
+                    echo    "       </div>";        
                     }
                     if($file_name4 != "") {
-                    echo    "       <div alt='0'>";
-        //         <div alt='0'>
-                    echo    "           <img class='thread$id-file4 thread-file4 thread-file' onclick='window.location.href = `files/thread-files/$file_name4`;' src='./files/thread-files/$file_name4' style='width:100%'></img>";
-        //             <img class="thread99-file3 thread-file3 thread-file" onclick="window.location.href = 'img/motorcycle-3.jpg';" src="./img/motorcycle-3.jpg" style="width:100%"></img>
-                    echo    "       </div>";
-        //         </div>            
+                    echo    "       <div alt='0'>";        
+                    echo    "           <img class='thread$id-file4 thread$id-file thread-file4 thread-file' onclick='window.location.href = `files/thread-files/$file_name4`;' src='./files/thread-files/$file_name4' style='width:100%'></img>";        
+                    echo    "       </div>";        
                     }
                     if($file_name5 != "") {
-                    echo    "       <div alt='0'>";
-        //         <div alt='0'>
-                    echo    "           <img class='thread$id-file5 thread-file5 thread-file' onclick='window.location.href = `files/thread-files/$file_name5`;' src='./files/thread-files/$file_name5' style='width:100%'></img>";
-        //             <img class="thread99-file3 thread-file3 thread-file" onclick="window.location.href = 'img/motorcycle-3.jpg';" src="./img/motorcycle-3.jpg" style="width:100%"></img>
-                    echo    "       </div>";
-        //         </div>            
+                    echo    "       <div alt='0'>";        
+                    echo    "           <img class='thread$id-file5 thread$id-file thread-file5 thread-file' onclick='window.location.href = `files/thread-files/$file_name5`;' src='./files/thread-files/$file_name5' style='width:100%'></img>";        
+                    echo    "       </div>";        
                     }
                     if($allEmpty) {
                     echo    "       <div alt='0'>";
-                    echo    "           <img class='thread$id-file1 thread-file' onclick='window.location.href = `img/thread-files/" . $westbrickSVG . "`;' src='./img/thread-files/". $westbrickSVG . "' alt='Thread File' style='width:100%'></img>";
+                    echo    "           <img class='thread$id-file0 thread$id-file thread-file' onclick='window.location.href = `img/thread-files/" . $westbrickSVG . "`;' src='./img/thread-files/". $westbrickSVG . "' alt='Thread File' style='width:100%'></img>";
                     echo    "       </div>";
                     }
                     //If there is at least two images then add arrows
@@ -169,100 +151,51 @@
                     echo     "      <a class='next' onclick='nextSlide($id)'>&#10095;</a>";
                     }                   
                     echo     "  </div>";
-                    //                   
-        //         <a class='prev' onclick='prevSlide(99)'>&#10094;</a>
-        //         <a class='next' onclick='nextSlide(99)'>&#10095;</a>
-        //     </div>         
-                    echo    "   <div class='top-middle-things'>";
-        //     <div class='top-middle-things'>
-                    echo    "       <h1 class='thread-title'>$title</h1>";
-        //         <h1 class='thread-title'>Motorcycle Discussion</h1>
-                    echo    "       <h4 class='thread-creator'>$creator</h4>";
-        //         <h4 class='thread-creator'>Chris Barber</h4>            
-                    echo    "       <h4><a href='mailto:$email' class='thread-seller-email'>$email</a></h4>";
-        //         <h4><a href='mailto:$email' class='thread-seller-email'>cbarber@westbrick.ca</a></h4>
-                    echo    "       <h5 class='thread-posting-date'>$date</h5>";
-        //         <h5 class='thread-posting-date'>June 19th 2024</h5>
-                    echo    "       <h5 class='thread-posting-date'>$time</h5>";
-        //         <h5 class='thread-posting-date'>14:41:40</h5>
-                    echo    "   </div>";
-        //     </div>
-                    echo    "   <div class='thread-body'>";
-        //     <div class='thread-body'>
-                    echo    "       <p class='thread-body'>$body</p>";                    
-        //         <p class='thread-body'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    echo    "   </div>";
-        //     </div>                         
-                    echo    "   <button class='thread-reply-button$id thread-reply-button' data-threadNumber='$id'>Reply</button>";
-        //     <button class="thread-reply-button99 thread-reply-button" data-threadNumber="99">Reply</button>
-                    echo    "   <form class='thread$id-reply-input-group thread-reply-input-group' data-replyDivExtended='false' method='post' action='./PHP/submit-reply.php' enctype='multipart/form-data'>";
-        //     <form class="thread99-reply-input-group thread-reply-input-group" data-replyDivExtended="false" method="post" action="./PHP/submit-reply.php" enctype="multipart/form-data">
-                    echo    "       <label for='thread$id-reply-input-title-box' class='thread$id-reply-input-title-label thread-reply-input-title-label'>Title:</label>";
-        //         <label for="thread99-reply-input-title-box" class="thread99-reply-input-title-label thread-reply-input-title-label">Title:</label>                
-                    echo    "       <input type='text' id='thread$id-reply-input-title-box' class='thread$id-reply-input-title-box thread-reply-input-title-box' name='thread$id-reply-input-name-box'></input>";
-        //         <input type="text" id="thread99-reply-input-title-box" class="thread99-reply-input-title-box thread-reply-input-title-box" name="thread99-reply-input-name-box"></input>
-                    echo    "       <label for='thread$id-reply-input-name-box' class='thread$id-reply-input-name-label thread-reply-input-name-label'>Name:</label>";
-        //         <label for="thread99-reply-input-name-box" class="thread99-reply-input-name-label thread-reply-input-name-label">Name:</label>                
-                    echo    "       <input type='text' id='thread$id-reply-input-name-box' class='thread$id-reply-input-name-box thread-reply-input-name-box' name='thread$id-reply-input-name-box'></input>";
-        //         <input type="text" id="thread99-reply-input-name-box" class="thread99-reply-input-name-box thread-reply-input-name-box" name="thread99-reply-input-name-box"></input>
-                    echo    "       <label for='thread$id-reply-input-box' class='thread$id-reply-input-box-label thread-reply-input-box-label'>Reply:</label>";
-        //         <label for="thread99-reply-input-box" class="thread99-reply-input-box-label thread-reply-input-box-label">Reply:</label>
+                    echo    "   <div class='top-middle-things'>";        
+                    echo    "       <h1 class='thread-title'>$title</h1>";        
+                    echo    "       <h4 class='thread-creator'>$creator</h4>";        
+                    echo    "       <h4><a href='mailto:$email' class='thread-seller-email'>$email</a></h4>";        
+                    echo    "       <h5 class='thread-posting-date'>$date</h5>";        
+                    echo    "       <h5 class='thread-posting-date'>$time</h5>";        
+                    echo    "   </div>";        
+                    echo    "   <div class='thread-body'>";        
+                    echo    "       <p class='thread-body'>$body</p>";        
+                    echo    "   </div>";        
+                    echo    "   <button class='thread-reply-button$id thread-reply-button' data-threadNumber='$id'>Reply</button>";        
+                    echo    "   <form class='thread$id-reply-input-group thread-reply-input-group' data-replyDivExtended='false' method='post' action='./PHP/submit-reply.php' enctype='multipart/form-data'>";        
+                    echo    "       <label for='thread$id-reply-input-title-box' class='thread$id-reply-input-title-label thread-reply-input-title-label'>Title:</label>";        
+                    echo    "       <input type='text' id='thread$id-reply-input-title-box' class='thread$id-reply-input-title-box thread-reply-input-title-box' name='thread$id-reply-input-name-box'></input>";        
+                    echo    "       <label for='thread$id-reply-input-name-box' class='thread$id-reply-input-name-label thread-reply-input-name-label'>Name:</label>";        
+                    echo    "       <input type='text' id='thread$id-reply-input-name-box' class='thread$id-reply-input-name-box thread-reply-input-name-box' name='thread$id-reply-input-name-box'></input>";        
+                    echo    "       <label for='thread$id-reply-input-box' class='thread$id-reply-input-box-label thread-reply-input-box-label'>Reply:</label>";        
                     echo    "       <textarea type='text' id='thread$id-reply-input-box' class='thread$id-reply-input-box thread-reply-body-input-box' name='thread$id-reply-input-box'></textarea>";
-        //         <textarea type="text" id="thread99-reply-input-box" class="thread99-reply-input-box thread-reply-body-input-box" name="thread99-reply-input-box"></textarea>
-        //         <!-- send the thread number with the data -->
-                    echo    "       <input type='hidden' name='thread-number' value='$id'>";
-        //         <input type="hidden" name="thread-number" value="99">                
-                    echo    "       <button class='thread$id-reply-submit-button thread-reply-submit-button' data-threadNumber='$id' type='submit' value='Post Thread'>Submit</button>";
-        //         <button class="thread99-reply-submit-button thread-reply-submit-button" data-threadNumber="99" type="submit" value="Post Thread">Submit</button>
+                    echo    "       <input type='hidden' name='thread-number' value='$id'>";        
+                    echo    "       <button class='thread$id-reply-submit-button thread-reply-submit-button' data-threadNumber='$id' type='submit' value='Post Thread'>Submit</button>";        
                     echo    "   </form>";
-        //     </form>            
-                    echo    "   <img class='thread$id-garbage-button thread-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $id'></img>";
-        //     <img class='thread99-garbage-button thread-garbage-button' src='img/garbage-can.svg' alt='Garbage Can 99'></img>
-                    echo    "   <h6 class='thread$id-id thread-id'>Thread #$id</h6>";
-        //     <h6 class='thread99-id thread-id'>Thread #99</h6>  
-                    echo    "   <div class='thread$id-replies thread-replies'>";
-        //     <div class="thread99-replies thread-replies">
-                    echo    "       <div class='thread$id-reply1 thread$is-reply thread-reply'>";
-        //         <div class="thread99-reply1 thread99-reply thread-reply">
-                    echo    "           <div class='thread-reply-file-container'>";
-        //             <div class="thread-reply-file-container">
-                    echo    "               <img class='thread$id-reply1-file thread$id-reply-file thread-reply-file' alt='Thread #$id Reply file' onclick='window.location.href = `img/motorcycle-1.jpg`;' src='./img/motorcycle-1.jpg'></img>";
-        //                 <img class="thread99-reply1-file thread99-reply-file thread-reply-file" alt="Thread #99 Reply file" onclick="window.location.href = 'img/motorcycle-1.jpg';" src="./img/motorcycle-1.jpg"></img>
-                    echo    "           </div>";
-        //             </div>                   
-                    echo    "           <div class='thread$id-reply1-text thread$id-reply-text thread-reply-text'>";
-        //             <div class="thread99-reply1-text thread99-reply-text thread-reply-text">
-                    echo    "               <h3 class='thread$id-reply1-title thread$id-reply-title thread-reply-title'>This is the Title of the Reply</h3>";
-        //                 <h3 class="thread99-reply1-title thread99-reply-title thread-reply-title">This is the Title of the Reply</h3>
-                    echo    "               <h5 class='thread$id-reply1-name thread$id-reply-name thread-reply-name'>Jim Bob</h5>";
-        //                 <h5 class="thread99-reply1-name thread99-reply-name thread-reply-name">Jim Bob</h5>
-                    echo    "               <h5 class='thread$id-reply1-date thread$id-reply-date thread-reply-date'>June 19th 2024</h5>";
-        //                 <h5 class="thread99-reply1-date thread99-reply-date thread-reply-date">June 19th 2024</h5>
-                    echo    "               <h5 class='thread$id-reply1-time thread$id-reply-time thread-reply-time'>14:41:40</h5>";
-        //                 <h5 class="thread99-reply1-time thread99-reply-time thread-reply-time">14:41:40</h5>
-                    echo    "               <p class='thread$id-reply1-body thread99-reply-body thread-reply-body'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, maxime soluta ex blanditiis hic ut sapiente aperiam labore qui, iure, impedit quod commodi aspernatur dolorem ratione non voluptatum beatae veniam!</p>";
-        //                 <p class="thread99-reply1-body thread99-reply-body thread-reply-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, maxime soluta ex blanditiis hic ut sapiente aperiam labore qui, iure, impedit quod commodi aspernatur dolorem ratione non voluptatum beatae veniam!</p>                        
-                    echo    "           </div>";
-        //             </div>
-                    echo    "           <h6 class='thread99-reply1-number-display thread99-reply-number-display thread-reply-number-display'>Reply #1</h6>";
-        //             <h6 class="thread99-reply1-number-display thread99-reply-number-display thread-reply-number-display">Reply #1</h6>
-                    echo    "           <img class='thread99-reply1-garbage-button thread99-reply-garbage-button thread-reply-garbage-button' src='img/garbage-can.svg' alt='Garbage Can 99'></img>";
-        //             <img class='thread99-reply1-garbage-button thread99-reply-garbage-button thread-reply-garbage-button' src='img/garbage-can.svg' alt='Garbage Can 99'></img>
+                    echo    "   <img class='thread$id-garbage-button thread-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $id'></img>";        
+                    echo    "   <h6 class='thread$id-id thread-id'>Thread #$id</h6>";        
+                    echo    "   <div class='thread$id-replies thread-replies'>";        
+                    echo    "       <div class='thread$id-reply1 thread$is-reply thread-reply'>";        
+                    echo    "           <div class='thread-reply-file-container'>";        
+                    echo    "               <img class='thread$id-reply1-file thread$id-reply-file thread-reply-file' alt='Thread #$id Reply file' onclick='window.location.href = `img/motorcycle-1.jpg`;' src='./img/motorcycle-1.jpg'></img>";        
+                    echo    "           </div>";        
+                    echo    "           <div class='thread$id-reply1-text thread$id-reply-text thread-reply-text'>";        
+                    echo    "               <h3 class='thread$id-reply1-title thread$id-reply-title thread-reply-title'>This is the Title of the Reply</h3>";        
+                    echo    "               <h5 class='thread$id-reply1-name thread$id-reply-name thread-reply-name'>Jim Bob</h5>";        
+                    echo    "               <h5 class='thread$id-reply1-date thread$id-reply-date thread-reply-date'>June 19th 2024</h5>";        
+                    echo    "               <h5 class='thread$id-reply1-time thread$id-reply-time thread-reply-time'>14:41:40</h5>";        
+                    echo    "               <p class='thread$id-reply1-body thread99-reply-body thread-reply-body'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, maxime soluta ex blanditiis hic ut sapiente aperiam labore qui, iure, impedit quod commodi aspernatur dolorem ratione non voluptatum beatae veniam!</p>";        
+                    echo    "           </div>";        
+                    echo    "           <h6 class='thread99-reply1-number-display thread99-reply-number-display thread-reply-number-display'>Reply #1</h6>";        
+                    echo    "           <img class='thread99-reply1-garbage-button thread99-reply-garbage-button thread-reply-garbage-button' src='img/garbage-can.svg' alt='Garbage Can 99'></img>";        
                     echo    "       </div>";
-        //         </div>
-                    echo    "   </div>";
-        //     </div>
+                    echo    "   </div>";        
                     echo    "</div>";
-        // </div>   
-
-                    
                 }            
             }
             else {
                 echo "<p>no rows found.</p>";
-            }
-            //  echo "<h1>TESTING</h1>";
-            // Close connection
+            }            
             mysqli_close($conn);
         ?>
     </div>    

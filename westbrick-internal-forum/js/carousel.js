@@ -193,21 +193,21 @@ const displayFirstFile = function(id, fileNumber) {
     firstFile.style.display = "block";
 }
 const setFileIndex = function(id, fileNumber) {
-    const threadFiles = document.querySelector('.thread' + id + '-files');
-    console.log(threadFiles);
+    const threadFiles = document.querySelector('.thread' + id + '-files');    
     threadFiles.setAttribute('alt', fileNumber-1);
 }
-//on initial load of website displays first image in each thread
+//on initial load of website displays first file in each thread
 window.onload = function() {
     const allThreads = document.querySelectorAll(".thread");    
     for(let i = 0; i < allThreads.length; i++) {      
-      const threadFilesDiv = allThreads[i].querySelector('div');      
-      const nestedImgFirst =  threadFilesDiv.querySelector('img');
-      if(nestedImgFirst != null) {        
-        const classString = nestedImgFirst.getAttribute('class');
+      const threadFilesDiv = allThreads[i].querySelector('div'); 
+      //by nested file image I mean the first image inside the div     
+      const nestedFileFirst =  threadFilesDiv.querySelector('img');      
+      if(nestedFileFirst != null && nestedFileFirst != "") {        
+        const classString = nestedFileFirst.getAttribute('class');        
         const idAndFileNumber = getIdAndFileNumber(classString); 
         const id = idAndFileNumber[0];
-        const fileNumber = idAndFileNumber[1];        
+        const fileNumber = idAndFileNumber[1];         
         displayFirstFile(id, fileNumber);
         setFileIndex(id, fileNumber);
       }

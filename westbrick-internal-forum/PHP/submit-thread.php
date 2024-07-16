@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Westbrick Internal Marketplace Thread Submitted</title>
+    <title>Westbrick Internal Forum Thread Submitted</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/script.js" defer></script>
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
@@ -57,11 +57,9 @@
 
         //get the first file and upload it
         $file_name1 = $_FILES['file1']['name'];
-        $file_tmp1 = $_FILES['file1']['tmp_name'];          
-        echo "<h1>file Name: $file_name1 " . "file tmp: $file_tmp1</h1>";
+        $file_tmp1 = $_FILES['file1']['tmp_name'];                  
         $target_dir1 = "../files/thread-files/";
-        $target_file1 = $target_dir1 . basename($file_name1);        
-        echo "<h1>Target dir: $target_dir1 " . "Target File: $target_file1</h1>";
+        $target_file1 = $target_dir1 . basename($file_name1);                
         // move_uploaded_file($file_tmp, $target_file);
         //chek if error
         if(!move_uploaded_file($file_tmp1, $target_file1)){

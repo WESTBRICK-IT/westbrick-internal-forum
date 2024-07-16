@@ -366,6 +366,9 @@ h3, h4, h5 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.files-input-section-title {
+    text-align: center;
+}
 @media screen and (max-width: 1700px) {
     .submission-form-top-input {
         flex-direction: column;
