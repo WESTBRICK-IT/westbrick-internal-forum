@@ -70,6 +70,7 @@
                     $file_name5 = $row["file_name5"];
                     $id = $row["id"];
                     $email = $row["email"];
+                    $replyCount = $row["reply_count"];
 
                     $title = convertApostrophe($title);
                     $creator = convertApostrophe($creator);
@@ -147,10 +148,10 @@
                     }
                     //If there is at least two images then add arrows
                     if($atLeastTwo) {
-                    echo     "      <a class='prev' onclick='prevSlide($id)'>&#10094;</a>";
-                    echo     "      <a class='next' onclick='nextSlide($id)'>&#10095;</a>";
+                    echo    "       <a class='prev' onclick='prevSlide($id)'>&#10094;</a>";
+                    echo    "       <a class='next' onclick='nextSlide($id)'>&#10095;</a>";
                     }                   
-                    echo     "  </div>";
+                    echo    "   </div>";
                     echo    "   <div class='top-middle-things'>";        
                     echo    "       <h1 class='thread-title'>$title</h1>";        
                     echo    "       <h4 class='thread-creator'>$creator</h4>";        
@@ -170,11 +171,12 @@
                     echo    "       <label for='thread$id-reply-input-box' class='thread$id-reply-input-box-label thread-reply-input-box-label'>Reply:</label>";        
                     echo    "       <textarea type='text' id='thread$id-reply-input-box' class='thread$id-reply-input-box thread-reply-body-input-box' name='thread$id-reply-input-box'></textarea>";
                     echo    "       <input type='hidden' name='thread-number' value='$id'>";        
+                    echo    "       <input type='hidden' name='reply-count' value='$replyCount'>";
                     echo    "       <button class='thread$id-reply-submit-button thread-reply-submit-button' data-threadNumber='$id' type='submit' value='Post Thread'>Submit</button>";        
                     echo    "   </form>";
                     echo    "   <img class='thread$id-garbage-button thread-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $id'></img>";        
                     echo    "   <h6 class='thread$id-id thread-id'>Thread #$id</h6>";        
-                    echo    "   <div class='thread$id-replies thread-replies'>";        
+                    echo    "   <div class='thread$id-replies thread-replies' data-replyCount='0'>";        
                     echo    "       <div class='thread$id-reply1 thread$is-reply thread-reply'>";        
                     echo    "           <div class='thread-reply-file-container'>";        
                     echo    "               <img class='thread$id-reply1-file thread$id-reply-file thread-reply-file' alt='Thread #$id Reply file' onclick='window.location.href = `img/motorcycle-1.jpg`;' src='./img/motorcycle-1.jpg'></img>";        

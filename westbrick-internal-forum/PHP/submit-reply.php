@@ -37,16 +37,20 @@
             die("Connection failed: " . $conn->connect_error);
         }    
         //get the amount of replies
-        echo "<h1>Thread Number: $threadNumber</h1>";
-        $query = "SELECT number_of_replies FROM threads WHERE id = " . $threadNumber;
-        $result = mysqli_query($conn, $query);
-        echo "<h1>Result: $result</h1>";
+        // echo "<h1>Thread Number: $threadNumber</h1>";
+        // $query = "SELECT number_of_replies FROM threads WHERE id = " . $threadNumber;
+        // $result = mysqli_query($conn, $query);
+        // echo "<h1>Result: $result</h1>";
         
         $name = $_POST['name'];
-        $body = $_POST['body'];        
+        $body = $_POST['body']; 
+        $replyCount = $_POST['reply-count'];
         $date = date('Y-m-d');        
         date_default_timezone_set('America/Denver'); 
         $time = date('H:i:s', time());
+
+        echo "<h1>Reply Count: $replyCount</h1>";
+        
         // echo $time;
         // echo "<h1>$time</h1>";
         function convertApostrophe($string) { 
